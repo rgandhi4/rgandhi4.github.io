@@ -13,6 +13,15 @@ let handlefail = function(err){
     console.log(err)
 }
 
+let appId = "5e42da1a9aa240db9b3541689381aba2";
+
+    let client = AgoraRTC.createClient({
+        mode: "live",
+        codec: "h264"
+    })
+
+    client.init(appId,() => console.log("AgoraRTC Client Connected"), handlefail);
+
 let globalStream;
 let isAudioMuted= false;
 let isVideoMuted= false;
@@ -36,14 +45,7 @@ function removeVideoStream(elementId) {
 document.getElementById("join").onclick = function () {
     let channelName = "cooking";
     let Username = document.getElementById("username").value;
-    let appId = "5e42da1a9aa240db9b3541689381aba2";
-
-    let client = AgoraRTC.createClient({
-        mode: "live",
-        codec: "h264"
-    })
-
-    client.init(appId,() => console.log("AgoraRTC Client Connected"), handlefail);
+    
 
     client.join(
         null, 
