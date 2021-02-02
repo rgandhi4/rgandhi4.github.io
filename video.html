@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title> Cook & Call </title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Raleway&display=swap" rel="stylesheet">
+        <a href="https://icons8.com/icon/43293/no-video"></a>
+        <a href="https://icons8.com/icon/43264/block-microphone"></a>
+        <a href="https://icons8.com/icon/43273/end-call"></a>
+    </head>
+    <body id = "video-body">
+        <div id = "main-container">
+            <div class = "left">
+                <div class = "left-top">
+                    <div id = "logo2">
+                        <img src = "assets/logo_blue.png" id="img-container"/>
+                    </div>
+
+                    <br/>
+                    <span id = "video-text"> Ready to start cooking? Join now! </span>
+                    <br/>  <br/>
+                    <input type="text" id="username" placeholder="Name"/>
+                    <button class="submitButton" id="join"> Join </button> 
+
+                </div>
+                <div class = "left-bottom" >
+                    <span id = "recipe-title"> Recipe Corner </span> 
+                    <br/>
+                    <input type="link" id="recipe-box" placeholder="Share your recipe here!"/>
+                    <br/>  <br/>
+                    <span style="text-align: left"> What we're cooking now: </span>
+                    <div id = "recipe-links"> </div>
+                </div>
+            </div>
+            <div class = "right">
+                <span id = "recipe-title"> Cooking now! </span>
+                <br/>
+                <div id="SelfStream">
+                </div>
+                
+                <div class="controls">
+                    <div class="icon" id="video-mute">
+                        <img src="https://img.icons8.com/ultraviolet/40/000000/no-video--v1.png"/>
+                    </div>
+                    <div class="icon" id="audio-mute">
+                        <img src="https://img.icons8.com/ultraviolet/40/000000/block-microphone--v1.png"/>
+                    </div>
+                    <div class="icon" id="leave">
+                        <img src="https://img.icons8.com/ultraviolet/40/000000/end-call.png"/>
+                    </div>
+                </div>
+
+                <div id="remoteStream">
+                </div>
+            </div>    
+        </div>
+        
+
+        <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.0.0.js"> </script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
